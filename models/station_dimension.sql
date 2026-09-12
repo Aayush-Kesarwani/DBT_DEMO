@@ -5,7 +5,7 @@ with bike as (
     START_STATION_NAME as station_name,
     START_LAT as station_lat,
     START_LNG as start_staion_lng
-    from {{ source('demo', 'bike') }}
+    from {{ ref('stg_bike') }}
     where ride_id != 'ride_id'
 )
 
